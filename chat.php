@@ -54,11 +54,43 @@
       float: left;
       color: #999;
     }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #f44336;
+      color: white;
+    }
     </style>
   </head>
   <body>
 
     <h2>Chat Messages</h2>
+
+    <div class="topnav">
+      <a class="active" href="chat.php">Chat</a>
+      <a href="wall.html">Home</a>
+      <a href="chats.html">Chats</a>
+      <a href="#contact">Profile</a>
+      <a href="#about">Signout</a>
+    </div>
 
     <div class="container">
       <img src="profile.jpeg" alt="Avatar" style="width:100%;">

@@ -104,6 +104,271 @@
          width: 100%;
       }
     }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .space {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(43, 43, 43);
+        position: relative;
+    }
+
+    .stars {
+        width: 100%;
+        height: 100%;
+        background: url(http://www.script-tutorials.com/demos/360/images/stars.png);
+        animation: shine 1s infinite 0s alternate;
+    }
+
+    .earth {
+        z-index: 2;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #0077be;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(10deg);
+        overflow: hidden;
+
+        &__shadow {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            position: absolute;
+            top: -25px;
+            left: -65px;
+            background-image: linear-gradient(rgb(230, 230, 230) 15%, #0097f1 15%, #0097f1 85%, rgb(230, 230, 230) 85%);
+        }
+
+        &__land {
+
+            &--1 {
+                width: 50px;
+                height: 20px;
+                background-color: aquamarine;
+                border-radius: 10px;
+                position: absolute;
+                left: 0px;
+                top: 20px;
+
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+
+            &--2 {
+                width: 100px;
+                height: 20px;
+                background-color: aquamarine;
+                border-radius: 10px;
+                position: absolute;
+                left: 50px;
+                top: 90px;
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+
+            &--join {
+                width: 20px;
+                height: 20px;
+                background-color: aquamarine;
+                position: absolute;
+                left: 110px;
+                top: 100px;
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+
+            &--3 {
+                width: 70px;
+                height: 20px;
+                background-color: aquamarine;
+                border-radius: 10px;
+                position: absolute;
+                left: 100px;
+                top: 115px;
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+
+            &--4 {
+                width: 70px;
+                height: 20px;
+                background-color: aquamarine;
+                border-radius: 10px;
+                position: absolute;
+                left: 60px;
+                top: 50px;
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+
+            &--5 {
+                width: 60px;
+                height: 20px;
+                background-color: aquamarine;
+                border-radius: 10px;
+                position: absolute;
+                left: 120px;
+                top: 150px;
+                animation: landMotion 10s linear 0s infinite;
+
+            }
+        }
+
+        &__cloud {
+
+            &--1 {
+                z-index: 5;
+                width: 50px;
+                height: 13px;
+                background-color: white;
+                position: absolute;
+                top: 50px;
+                left: 20px;
+                border-radius: 15px;
+                animation: landMotion 7s linear 0s infinite reverse;
+
+            }
+
+            &--2 {
+                z-index: 5;
+                width: 30px;
+                height: 13px;
+                background-color: white;
+                position: absolute;
+                top: 150px;
+                left: 120px;
+                border-radius: 15px;
+                animation: landMotion 8s linear 0s infinite reverse;
+
+            }
+
+            &--3 {
+                z-index: 5;
+                width: 45px;
+                height: 13px;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 40px;
+                border-radius: 15px;
+                animation: landMotion 7s linear 0s infinite reverse;
+
+            }
+        }
+    }
+
+    .moon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgb(183, 186, 167) ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        overflow: hidden;
+        animation: moonRotation 5s linear 0s infinite forwards;
+
+        
+
+        &__shadow {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #E6E8D2;
+            position: absolute;
+            top: -5px;
+            left: -17px;
+        }
+
+        &__maria {
+
+            &--1 {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                left: 20px;
+                background-color: rgb(203, 206, 182) ;
+            }  
+
+            &--2 {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                position: absolute;
+                top: 25px;
+                left: 35px;
+                background-color: rgb(203, 206, 182) ;
+            }   
+
+            &--3 {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50px;
+                left: 17px;
+                background-color: rgb(203, 206, 182);
+            }   
+        }
+    }
+
+    @keyframes moonRotation {
+        0% {
+            transform: translate(-300px, -50%) rotate(10deg) scale(1);
+            z-index: 1;
+        }
+
+        25% {
+            transform: translate(-40px, -50%) rotate(10deg) scale(.9);
+        }
+
+        50% {
+            transform: translate(260px, -50%) rotate(10deg) scale(1);
+            z-index: 1;
+        }
+
+        51% {
+            z-index: 6;
+        }
+
+        75% {
+            transform: translate(-40px, -50%) rotate(10deg) scale(1.15);
+        }
+
+        100% {
+            transform: translate(-300px, -50%) rotate(10deg) scale(1);
+            z-index: 1;
+        }
+    }
+
+    @keyframes landMotion {
+        0% {
+            transform: translateX(-200px);
+        }
+
+        100% {
+            transform: translateX(200px);
+        }
+    }
+
+    @keyframes shine {
+        0% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
     </style>
   </head>
   <body>
@@ -114,12 +379,29 @@
     <button class="tablink" onclick="openPage('Forgot', this, 'grey')">Forgot</button>
 
     <div id="Home" class="tabcontent">
-      <!-- Slide Show -->
-      <section>
-        <img class="mySlides" src="https://images.wallpaperscraft.com/image/hands_couple_love_124601_1280x720.jpg" style="width:100%">
-        <img class="mySlides" src="https://images.wallpaperscraft.com/image/couple_silhouettes_kiss_hugs_119269_1280x720.jpg" style="width:100%">
-        <img class="mySlides" src="https://pexels-library.com/images/easy-cupid-drawing/easy-cupid-drawing-23.jpg" style="width:100%">
-      </section>
+             <div class="container">
+            <div class="space">
+                <div class="stars">&nbsp;</div>
+                <div class="earth">
+                    <div class="earth__shadow">&nbsp;</div>
+                    <div class="earth__land--1">&nbsp;</div>
+                    <div class="earth__land--2">&nbsp;</div>
+                    <div class="earth__land--join">&nbsp;</div>
+                    <div class="earth__land--3">&nbsp;</div>
+                    <div class="earth__land--4">&nbsp;</div>
+                    <div class="earth__land--5">&nbsp;</div>
+                    <div class="earth__cloud--1">&nbsp;</div>
+                    <div class="earth__cloud--2">&nbsp;</div>
+                    <div class="earth__cloud--3">&nbsp;</div>
+                </div>
+                <div class="moon">
+                    <div class="moon__shadow">&nbsp;</div>
+                    <div class="moon__maria--1">&nbsp;</div>
+                    <div class="moon__maria--2">&nbsp;</div>
+                    <div class="moon__maria--3">&nbsp;</div>
+                </div>
+            </div>
+       </div>
     </div>
 
     <div id="Signup" class="tabcontent">
@@ -222,23 +504,6 @@
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
     </script>
-    <script>
-      // Automatic Slideshow - change image every 3 seconds
-      var myIndex = 0;
-      carousel();
-
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}
-        x[myIndex-1].style.display = "block";
-        setTimeout(carousel, 3000);
-      }
-      </script>
      
   </body>
 </html>

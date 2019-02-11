@@ -62,15 +62,15 @@
 		}
 
 		.topnav a.active {
-		  background-color: #4CAF50;
+		  background-color: #f44336;
 		  color: white;
 		}
     	</style>
 	</head>
 	<body>
 		<div class="topnav">
-		  <a class="active" href="wall.html">Home</a>
-		  <a href="chats.html">Chats</a>
+		  <a href="wall.html">Home</a>
+		  <a class="active" href="chats.html">Chats</a>
 		  <a href="#contact">Profile</a>
 		  <a href="#about">Signout</a>
 		</div>
